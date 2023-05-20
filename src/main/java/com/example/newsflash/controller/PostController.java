@@ -62,6 +62,9 @@ public class PostController {
         existingPost.setTitle(post.getTitle());
         existingPost.setContent(post.getContent());
         existingPost.setUpdatedOn(post.getUpdatedOn());
+        existingPost.setContent(post.getContent());
+        existingPost.setUrlToImage(post.getUrlToImage());
+        existingPost.setAuthor(post.getAuthor());
         Post updatedPost = postService.updatePost(existingPost);
         return new ResponseEntity<>(updatedPost, HttpStatus.OK);
     }
